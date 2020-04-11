@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <t  itle>Document</t  itle>
+</head>
+<body>
+<script>
+    function p1(){
+        return new Promise((res,rej)=>{
+            console.log("出发去买鸡蛋")
+            setTimeout(()=>{
+                if(Math.random()<0.8){
+                    console.log("鸡蛋买回来了")
+                    res()
+                }else{
+                    console.log("p1摔倒了")
+                    rej("鸡蛋摔破了")
+                }
+            },2000)
+        })
+    }
+    function p2(){
+        return new Promise((res,rej)=>{
+            setTimeout(()=>{
+                if(Math.random()<0.8){
+                    console.log("拿到鸡蛋，出发去买煎饼果子")
+                    res()
+                }else{
+                    console.log("p2摔倒了")
+                    rej("煎饼果子脏了")
+                }
+            },2000)
+        })
+    }
+    p1()
+    .then(p2)
+    .then(()=>{console.log("吃到煎饼果子了")})
+    .catch(errMsg=>{console.log(errMsg+"竹篮打水一场空")})
+</script>
+</body>
+
+</html>

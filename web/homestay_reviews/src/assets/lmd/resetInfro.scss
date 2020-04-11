@@ -1,0 +1,30 @@
+.containerInfo{
+    .van-picker__cancel, .van-picker__confirm{color:#006c70;}
+}
+.containerOeder{
+    .van-tab{font-size:14px;}
+    .van-nav-bar .van-icon{color:#006c70;}
+    .van-tabs__line{background-color:#006c70;}
+    .van-tab--active{color:#006c70;}
+    .van-hairline--top-bottom::after{border-width:0 0;}
+    .van-hairline-unset--top-bottom::after{border-width:0 0;}
+}
+.containerlike{
+    .van-nav-bar .van-icon{color:#006c70;}
+}
+.containerlogin{
+    .van-button--normal{margin-top:30px;width:95%;}
+    .van-button--default{border:1px solid #006c70;}
+    .van-button--default{color:#006c70;}
+}
+
+.login{
+    .van-button--primary{
+        background-color:#006c70;
+        border:#006c70;
+    }
+}
+
+// .people_box_out{
+//   .van-field__error-message{color:green;}
+// }
